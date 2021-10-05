@@ -16,11 +16,13 @@ import Footer from "./containers/Footer";
 import ForgotPassword from "./containers/authentication/ForgotPassword";
 import FourmHome from "./containers/FourmHome";
 import GraphQLTesting from "./containers/GraphQLTesting";
+import MarketPostTest from "./containers/MarketPostTest";
 import Header from "./containers/Header";
 import Home from "./containers/Home";
 import MuiAlert from "@material-ui/lab/Alert";
 import MyAccount from "./containers/account/MyAccount";
 import PostArticle from "./containers/account/staff/Article/PostArticle";
+import PostMarketItem from "./containers/account/staff/Market/PostMarketItem";
 import PostUwcssaJob from "./containers/account/staff/UwcssaJob/PostUwcssaJob";
 import Profile from "./containers/account/Profile";
 import ResetPassword from "./containers/authentication/ResetPassword";
@@ -102,6 +104,11 @@ function App({ load_user, isAuthenticated, setUserCounts }) {
                   component={PostArticle}
                 />
                 <Route
+                  path="/account/staff/market/postMarketItem"
+                  exact
+                  component={PostMarketItem}
+                />
+                <Route
                   path="/account/staff/uwcssaJob/postUwcssaJob"
                   exact
                   component={PostUwcssaJob}
@@ -133,6 +140,11 @@ function App({ load_user, isAuthenticated, setUserCounts }) {
                 />
                 <Route path="/contactUs" exact component={ContactUs} />
                 <Route path="/career" component={Career} />
+                <Route
+                  path="/marketPostTest"
+                  exact
+                  component={MarketPostTest}
+                />
                 <Route>404 Not Found!</Route>
               </Switch>
             </div>

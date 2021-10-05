@@ -3,7 +3,10 @@ import {
   postArticleReducer,
   selectedArticleReducer,
 } from "./articleReducer";
-
+import {
+  marketItemReducer,
+  selectedMarketItemReducer,
+} from "./marketItemReducer";
 import { authReducer } from "./authReducer";
 import { combineReducers } from "redux";
 import { userReducer } from "./userReducer";
@@ -16,5 +19,7 @@ const reducers = combineReducers({
   postArticle: postArticleReducer,
   allUwcssaJobs: uwcssaJobReducer,
   allUsers: userReducer,
+  allMarketItems: marketItemReducer,
+  marketItem: selectedMarketItemReducer,
 });
 export default reducers;

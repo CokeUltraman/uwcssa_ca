@@ -167,6 +167,12 @@ const Header = ({ signOut, isAuthenticated }) => {
         </IconButton>
         <p>GraphQLTesting</p>
       </MenuItem>
+      <MenuItem component={Link} to="/marketPostTest" onClick={handleMenuClose}>
+        <IconButton>
+          <StorefrontIcon />
+        </IconButton>
+        <p>Market</p>
+      </MenuItem>
       {isAuthenticated ? (
         <MenuItem onClick={handleProfileMenuOpen}>
           <IconButton
@@ -253,6 +259,14 @@ const Header = ({ signOut, isAuthenticated }) => {
               to="/graphqlTesting"
             >
               GraphQLTesting
+            </Button>
+            <Button
+              variant="text"
+              style={{ color: "#FFF" }}
+              component={Link}
+              to="/marketPostTest"
+            >
+              Market
             </Button>
             {isAuthenticated ? (
               ""
